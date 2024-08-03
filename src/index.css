@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  background: hsl(210, 46%, 95%);
+}
+
+@layer components {
+  .card {
+    @apply rounded-lg px-4 py-8 bg-[url('/images/quote-02-double-close.svg')] bg-no-repeat bg-right-top bg-[length:10rem_5rem] shadow-2xl;
+  }
+
+  .card-container-name {
+    @apply mb-4 inline-grid grid-cols-[40px_1fr] gap-x-2 gap-y-0;
+  }
+
+  .card-photo {
+    @apply row-span-2 rounded-full border-2 border-white/50 w-10 h-10;
+  }
+
+  .card-name {
+    @apply font-bold;
+  }
+
+  .card-edu {
+    @apply text-white/50;
+  }
+
+  .card-info {
+    @apply mb-4 text-2xl font-bold;
+  }
+
+  .card-description {
+    @apply text-sm text-white/50 before:content-['«'] after:content-['»'];
+  }
+}
